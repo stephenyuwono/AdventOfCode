@@ -1,5 +1,7 @@
-import numpy as np
+from time import perf_counter
 import re
+
+start = perf_counter()
 
 file = 'input_03.txt'
 
@@ -45,3 +47,4 @@ for l,line in enumerate(test):
             num += int(x.group())
 
 print(num)
+print(f'time: {perf_counter()-start:.3f} s')

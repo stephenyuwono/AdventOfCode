@@ -1,4 +1,7 @@
+from time import perf_counter
 import numpy as np
+
+start = perf_counter()
 
 file = 'input_02.txt'
 
@@ -31,3 +34,4 @@ with open(file) as f:
         id += np.prod(list(power.values()))
 
 print(id)
+print(f'time: {perf_counter()-start:.3f} s')

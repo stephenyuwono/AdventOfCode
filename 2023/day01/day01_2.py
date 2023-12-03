@@ -1,5 +1,8 @@
+from time import perf_counter
 import numpy as np
 import re
+
+start = perf_counter()
 
 file = 'input_01.txt'
 
@@ -48,3 +51,4 @@ with open(file) as f:
     f.close()
 
 print(cal)
+print(f'time: {perf_counter()-start:.3f} s')
