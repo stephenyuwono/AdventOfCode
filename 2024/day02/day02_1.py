@@ -8,7 +8,7 @@ file = 'input_02.txt'
 with open(file, 'r') as f:
     safe_count = 0
     for l,line in enumerate(f):
-        x = np.loadtxt(line.split(),dtype='i8')
+        x = np.array(line.split(),dtype='i8')
 
         diff = x[1:] - x[:-1]
 
